@@ -1,0 +1,1623 @@
+/* =====================================================
+   THE MARKET OS
+   Main Styling
+   Brand: Charcoal Black | Grey | Gold
+===================================================== */
+
+
+/* GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+body {
+
+    background: #F3F3F3;
+    color: #2B2B2B;
+    min-height: 100vh;
+
+}
+
+
+
+/* =====================================================
+   APPLICATION STRUCTURE
+===================================================== */
+
+
+.app {
+
+    display: flex;
+    min-height: 100vh;
+
+}
+
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+
+.sidebar {
+
+    width: 280px;
+    background: #1C1C1C;
+    color: white;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 4px 0 15px rgba(0,0,0,0.15);
+
+}
+
+
+
+
+.brand {
+
+    text-align: center;
+    margin-bottom: 45px;
+
+}
+
+
+
+.logo-placeholder {
+
+    width: 80px;
+    height: 80px;
+
+    margin: auto;
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #D4AF37;
+    color: #1C1C1C;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+}
+
+
+
+.brand h2 {
+
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+
+}
+
+
+
+.brand span {
+
+    color: #D4AF37;
+    font-size: 13px;
+
+}
+
+
+
+
+/* MENU */
+
+
+nav {
+
+    flex: 1;
+
+}
+
+
+
+.menu {
+
+
+    width: 100%;
+    border: none;
+
+    background: transparent;
+
+    color: #D0D0D0;
+
+    text-align: left;
+
+    padding: 16px 18px;
+
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+
+}
+
+
+
+.menu:hover {
+
+
+    background: rgba(212,175,55,0.15);
+
+    color:white;
+
+
+}
+
+
+
+.menu.active {
+
+
+    background:#D4AF37;
+
+    color:#1C1C1C;
+
+    font-weight:600;
+
+
+}
+
+
+
+.logout {
+
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    background:#333;
+
+    color:white;
+
+    cursor:pointer;
+
+
+}
+
+
+
+.logout:hover {
+
+    background:#D4AF37;
+    color:#1C1C1C;
+
+}
+
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+
+.main {
+
+
+    flex:1;
+
+    padding:35px 45px;
+
+}
+
+
+
+/* TOP BAR */
+
+
+.topbar {
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+.topbar h1 {
+
+
+    font-size:32px;
+
+    color:#1C1C1C;
+
+
+}
+
+
+
+.topbar p {
+
+
+    color:#777;
+
+    margin-top:5px;
+
+
+}
+
+
+
+.profile {
+
+
+    background:#1C1C1C;
+
+    color:#D4AF37;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   DASHBOARD CARDS
+===================================================== */
+
+
+.dashboard {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+.card {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    border-left:5px solid #D4AF37;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.card h3 {
+
+
+    color:#555;
+
+    font-size:15px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.card strong {
+
+
+    display:block;
+
+    font-size:32px;
+
+    color:#1C1C1C;
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+.card p {
+
+    color:#777;
+
+}
+
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+
+.sale-box {
+
+
+    background:white;
+
+    max-width:750px;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.sale-box h2 {
+
+
+    margin-bottom:25px;
+
+    color:#1C1C1C;
+
+
+}
+
+
+
+.form-group {
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+label {
+
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#444;
+
+
+}
+
+
+
+input,
+select {
+
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+
+}
+
+
+
+input:focus,
+select:focus {
+
+
+    outline:none;
+
+    border-color:#D4AF37;
+
+}
+
+
+
+/* BUTTONS */
+
+
+button {
+
+
+    transition:0.3s;
+
+
+}
+
+
+#search,
+#save, 
+#sbbgSearch,
+#sbbgSave,
+#inventoryFilterButton,
+#stockSummaryButton,
+#restockRefreshButton,
+#outsourcedSaveButton,
+#addInvoiceProduct,
+#generateInvoiceButton,
+#generateWarrantyButton,
+#topupCalculateButton {
+
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1C1C1C;
+
+    color:#D4AF37;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+
+}
+
+
+
+#search:hover,
+#save:hover,
+#sbbgSearch:hover,
+#sbbgSave:hover,
+#inventoryFilterButton:hover,
+#stockSummaryButton:hover,
+#restockRefreshButton:hover,
+#outsourcedSaveButton:hover,
+#addInvoiceProduct:hover,
+#generateInvoiceButton:hover,
+#generateWarrantyButton:hover,
+#topupCalculateButton:hover {
+
+
+    background:#D4AF37;
+
+    color:#1C1C1C;
+
+
+}
+
+
+
+
+/* PHONE RESULT */
+
+
+.phone-info {
+
+
+    background:#F7F7F7;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.phone-info p {
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+/* =====================================================
+   TOAST MESSAGE
+===================================================== */
+
+
+#toast {
+
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    background:#1C1C1C;
+
+    color:#D4AF37;
+
+    padding:18px 25px;
+
+    border-radius:10px;
+
+    display:none;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+/* HIDDEN ELEMENTS */
+
+
+.hidden {
+
+
+    display:none;
+
+}
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1200px){
+
+
+.dashboard {
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:800px){
+
+
+.sidebar {
+
+    width:80px;
+
+}
+
+
+
+.brand h2,
+.brand span,
+.menu {
+
+    font-size:0;
+
+}
+
+
+
+.main {
+
+    padding:20px;
+
+}
+
+
+
+.dashboard {
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+/* =====================================================
+   INVENTORY FILTERED RESULTS
+===================================================== */
+
+.inventory-results-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+/* Inventory table */
+
+.inventory-results-table {
+    width: 100%;
+    min-width: 1250px;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: white;
+}
+
+
+/* Header */
+
+.inventory-results-table th {
+    background: #eeeeee;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-bottom: 2px solid #d5d5d5;
+    text-align: center;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
+/* Cells */
+
+.inventory-results-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+/* Item should be left aligned */
+
+.inventory-results-table td:nth-child(3) {
+    text-align: left;
+    font-weight: 600;
+}
+
+
+/* Sheet and row */
+
+.inventory-results-table td:nth-child(1),
+.inventory-results-table td:nth-child(2) {
+    color: #555;
+}
+
+
+/* Money columns */
+
+.inventory-results-table td:nth-child(5),
+.inventory-results-table td:nth-child(6),
+.inventory-results-table td:nth-child(7),
+.inventory-results-table td:nth-child(8),
+.inventory-results-table td:nth-child(9),
+.inventory-results-table td:nth-child(11) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* Status */
+
+.inventory-results-table td:nth-child(10) {
+    font-weight: 700;
+}
+
+
+/* IMEI */
+
+.inventory-results-table td:nth-child(12) {
+    font-family: monospace;
+    letter-spacing: 0.5px;
+}
+
+
+/* Color */
+
+.inventory-results-table td:nth-child(13) {
+    text-align: left;
+}
+
+
+/* Hover */
+
+.inventory-results-table tbody tr:hover {
+    background: #f7f7f7;
+}
+
+
+/* No results */
+
+.inventory-no-results {
+    padding: 25px;
+    text-align: center;
+    color: #777;
+}
+
+
+/* Result count */
+
+.inventory-result-count {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* =====================================================
+   STOCK SUMMARY TABLE
+   ===================================================== */
+
+#stockSummary .inventory-results-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+#stockSummary .inventory-results-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+}
+
+#stockSummary .inventory-results-table th:first-child,
+#stockSummary .inventory-results-table td:first-child {
+    width: 70%;
+}
+
+#stockSummary .inventory-results-table th:last-child,
+#stockSummary .inventory-results-table td:last-child {
+    width: 30%;
+    text-align: center;
+}
+/* =====================================================
+   RESTOCK TABLE — RESPONSIVE
+===================================================== */
+
+#restockResults {
+    width: 100%;
+}
+
+#restockResults .restock-results-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+#restockResults .restock-results-table {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+#restockResults .restock-results-table th {
+    background: #eeeeee;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 6px;
+    white-space: nowrap;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+/* =====================================================
+   CELLS
+===================================================== */
+
+#restockResults .restock-results-table td {
+    padding: 9px 6px;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* =====================================================
+   COLUMN WIDTHS
+===================================================== */
+
+/* ITEM */
+#restockResults .restock-results-table th:nth-child(1),
+#restockResults .restock-results-table td:nth-child(1) {
+    width: 36%;
+    text-align: left;
+}
+
+/* PHYSICAL */
+#restockResults .restock-results-table th:nth-child(2),
+#restockResults .restock-results-table td:nth-child(2) {
+    width: 13%;
+}
+
+/* I/T */
+#restockResults .restock-results-table th:nth-child(3),
+#restockResults .restock-results-table td:nth-child(3) {
+    width: 13%;
+}
+
+/* TARGET */
+#restockResults .restock-results-table th:nth-child(4),
+#restockResults .restock-results-table td:nth-child(4) {
+    width: 13%;
+}
+
+/* RESTOCK */
+#restockResults .restock-results-table th:nth-child(5),
+#restockResults .restock-results-table td:nth-child(5) {
+    width: 13%;
+}
+
+/* PRIORITY */
+#restockResults .restock-results-table th:nth-child(6),
+#restockResults .restock-results-table td:nth-child(6) {
+    width: 12%;
+}
+
+/* =====================================================
+   LAST ROW
+===================================================== */
+
+#restockResults .restock-results-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* =====================================================
+   SMALL WINDOWS
+===================================================== */
+
+@media (max-width: 700px) {
+
+    #restockResults .restock-results-table {
+        font-size: 12px;
+    }
+
+    #restockResults .restock-results-table th,
+    #restockResults .restock-results-table td {
+        padding: 8px 4px;
+    }
+
+    #restockResults .restock-results-table th:nth-child(1),
+    #restockResults .restock-results-table td:nth-child(1) {
+        width: 34%;
+    }
+
+    #restockResults .restock-results-table th:nth-child(2),
+    #restockResults .restock-results-table td:nth-child(2),
+    #restockResults .restock-results-table th:nth-child(3),
+    #restockResults .restock-results-table td:nth-child(3),
+    #restockResults .restock-results-table th:nth-child(4),
+    #restockResults .restock-results-table td:nth-child(4),
+    #restockResults .restock-results-table th:nth-child(5),
+    #restockResults .restock-results-table td:nth-child(5) {
+        width: 16.5%;
+    }
+}
+
+/* =====================================================
+   RESTOCK PRIORITY
+===================================================== */
+
+.restock-results-table .restock-quantity {
+    font-weight: bold;
+}
+
+
+/* PRIORITY CELL */
+
+.restock-priority {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* CRITICAL */
+
+.restock-priority.critical {
+    font-weight: 800;
+}
+
+
+/* HIGH */
+
+.restock-priority.high {
+    font-weight: 700;
+}
+
+
+/* MODERATE */
+
+.restock-priority.moderate {
+    font-weight: 600;
+}
+/* =====================================================
+   SBBG / BOOK RESTOCK TABLE
+   NATURAL COLUMN SIZING
+===================================================== */
+
+#restockResults .sbbg-book-table {
+    width: 100%;
+    table-layout: auto;
+}
+
+
+/* ---------------------------------------------
+   SHEET
+--------------------------------------------- */
+
+#restockResults .sbbg-book-table th:nth-child(1),
+#restockResults .sbbg-book-table td:nth-child(1) {
+    width: 1%;
+    white-space: nowrap;
+    text-align: left;
+}
+
+
+/* ---------------------------------------------
+   MINI-BATCH
+--------------------------------------------- */
+
+#restockResults .sbbg-book-table th:nth-child(2),
+#restockResults .sbbg-book-table td:nth-child(2) {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+/* ---------------------------------------------
+   PART TYPE
+--------------------------------------------- */
+
+#restockResults .sbbg-book-table th:nth-child(3),
+#restockResults .sbbg-book-table td:nth-child(3) {
+    width: 1%;
+    white-space: nowrap;
+    text-align: left;
+}
+
+
+/* ---------------------------------------------
+   ITEM
+--------------------------------------------- */
+
+#restockResults .sbbg-book-table th:nth-child(4),
+#restockResults .sbbg-book-table td:nth-child(4) {
+    width: auto;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+
+/* ---------------------------------------------
+   LIVE STOCK
+--------------------------------------------- */
+
+#restockResults .sbbg-book-table th:nth-child(5),
+#restockResults .sbbg-book-table td:nth-child(5) {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* =========================
+   RECORD SALE SUBMENU
+   ========================= */
+
+.record-sale-menu {
+    position: relative;
+}
+
+.record-sale-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+#recordSaleArrow {
+    margin-left: auto;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.record-sale-submenu {
+    margin-top: 4px;
+    margin-left: 18px;
+}
+
+.record-sale-option {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.record-sale-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* =====================================================
+   INVENTORY DROPDOWN
+   ===================================================== */
+
+.inventory-menu {
+    position: relative;
+}
+
+.inventory-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+#inventoryArrow {
+    margin-left: auto;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.inventory-submenu {
+    margin-top: 4px;
+    margin-left: 18px;
+}
+
+.inventory-option {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.inventory-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* =====================================================
+   SBBG / BOOK STOCK SUMMARY TABLE
+   ===================================================== */
+
+#stockSummary .sbbg-book-stock-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+}
+
+
+/* HEADER */
+
+#stockSummary .sbbg-book-stock-table th {
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* CELLS */
+
+#stockSummary .sbbg-book-stock-table td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   COLUMN WIDTHS
+   ===================================================== */
+
+/* SHEET */
+#stockSummary .sbbg-book-stock-table th:nth-child(1),
+#stockSummary .sbbg-book-stock-table td:nth-child(1) {
+    width: 14%;
+}
+
+
+/* MINI-BATCH */
+#stockSummary .sbbg-book-stock-table th:nth-child(2),
+#stockSummary .sbbg-book-stock-table td:nth-child(2) {
+    width: 14%;
+}
+
+
+/* PART TYPE */
+#stockSummary .sbbg-book-stock-table th:nth-child(3),
+#stockSummary .sbbg-book-stock-table td:nth-child(3) {
+    width: 22%;
+}
+
+
+/* ITEM */
+#stockSummary .sbbg-book-stock-table th:nth-child(4),
+#stockSummary .sbbg-book-stock-table td:nth-child(4) {
+    width: 35%;
+    text-align: left;
+}
+
+
+/* LIVE STOCK */
+#stockSummary .sbbg-book-stock-table th:nth-child(5),
+#stockSummary .sbbg-book-stock-table td:nth-child(5) {
+    width: 15%;
+    text-align: center;
+}
+
+/* =====================================================
+   SBBG / BOOK STOCK — CELL WRAPPING
+   ===================================================== */
+
+#stockSummary .sbbg-book-stock-table td {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    vertical-align: middle;
+    line-height: 1.3;
+}
+
+
+/* Keep headers on one line */
+
+#stockSummary .sbbg-book-stock-table th {
+    white-space: nowrap;
+}
+
+
+/* Keep LIVE STOCK compact */
+
+#stockSummary .sbbg-book-stock-table th:nth-child(5),
+#stockSummary .sbbg-book-stock-table td:nth-child(5) {
+    white-space: nowrap;
+}
+
+/* =====================================================
+   TOOLS MENU
+   ===================================================== */
+
+.tools-menu {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tools-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.tools-main span:first-child {
+    display: flex;
+    align-items: center;
+}
+
+#toolsArrow {
+    margin-left: auto;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.tools-submenu {
+    margin-top: 4px;
+    margin-left: 18px;
+}
+
+.tools-option {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.tools-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+.invoice-party-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.invoice-party-block h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+}
+
+.invoice-description-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.invoice-additional-description {
+    resize: vertical;
+}
+
+/* =====================================================
+   INVOICE GENERATOR — FINAL FORM STYLING
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   MAIN INVOICE FORM
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage .card {
+    margin-bottom: 18px;
+}
+
+
+/* -----------------------------------------------------
+   INVOICE INFORMATION
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage .form-grid {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+/* Keep invoice fields from becoming excessively wide */
+
+#invoiceGeneratorPage .form-group {
+    max-width: 1000px;
+}
+
+
+/* Standard invoice inputs */
+
+#invoiceGeneratorPage input,
+#invoiceGeneratorPage select {
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------------------
+   TEXTAREAS
+   -----------------------------------------------------
+
+   Textareas were previously using the browser's default
+   appearance because the global CSS styles inputs/selects,
+   but not textarea.
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage textarea {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 80px;
+    box-sizing: border-box;
+
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+    font-family: inherit;
+    line-height: 1.4;
+
+    resize: vertical;
+}
+
+
+/* Address fields */
+
+#invoiceGeneratorPage #invoiceCustomerAddress,
+#invoiceGeneratorPage #invoiceShippingAddress {
+    min-height: 90px;
+}
+
+
+/* Additional description */
+
+#invoiceGeneratorPage .invoice-additional-description {
+    min-height: 70px;
+}
+
+
+/* Payment information */
+
+#invoiceGeneratorPage #invoicePaymentInfo {
+    min-height: 90px;
+}
+
+
+/* -----------------------------------------------------
+   BILL TO / SHIP TO
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage .invoice-party-block {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+/* -----------------------------------------------------
+   PRODUCTS
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage .invoice-product-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px 120px;
+    gap: 18px;
+    align-items: start;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Product name + additional description */
+
+#invoiceGeneratorPage .invoice-description-block {
+    width: 100%;
+}
+
+
+/* Unit price */
+
+#invoiceGeneratorPage .invoice-product-row
+.invoice-unit-price {
+    width: 100%;
+}
+
+
+/* Quantity */
+
+#invoiceGeneratorPage .invoice-product-row
+.invoice-quantity {
+    width: 100%;
+}
+
+
+/* -----------------------------------------------------
+   ADD PRODUCT BUTTON
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage #addInvoiceProduct {
+    margin-top: 4px;
+    margin-bottom: 22px;
+}
+
+
+/* -----------------------------------------------------
+   TAX & PAYMENT
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage #invoiceVAT,
+#invoiceGeneratorPage #invoicePaymentInfo {
+    width: 100%;
+}
+
+
+
+
+
+/* -----------------------------------------------------
+   GENERATE INVOICE
+   ----------------------------------------------------- */
+
+#invoiceGeneratorPage #generateInvoiceButton {
+    margin-top: 4px;
+}
+
+
+/* -----------------------------------------------------
+   RESPONSIVE
+   ----------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    #invoiceGeneratorPage .invoice-product-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #invoiceGeneratorPage .invoice-description-block {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #invoiceGeneratorPage .invoice-product-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #invoiceGeneratorPage .invoice-description-block {
+        grid-column: auto;
+    }
+
+}
+/* WARRANTY CLIENT ADDRESS */
+#warrantyClientAddress {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #ffffff;
+    color: #222222;
+    resize: vertical;
+}
+
+#warrantyClientAddress:focus {
+    outline: none;
+}
+#topupCalculateButton {
+    margin-bottom: 18px;
+}
+
+#topupCalculationResult {
+    margin-top: 0;
+}
+/* =====================================================
+   TOPUP CALCULATION RESULT
+===================================================== */
+
+#topupCalculationResult {
+    margin-top: 18px;
+}
+
+#topupCalculationResult h3 {
+    margin-bottom: 20px;
+}
+
+.topup-result-summary > div {
+    margin-bottom: 12px;
+}
+
+.topup-result-summary > div:last-child {
+    margin-bottom: 0;
+}
+
+.topup-result-summary span {
+    display: block;
+    margin-bottom: 3px;
+    color: #444;
+    font-size: 15px;
+}
+
+.topup-result-summary strong {
+    display: block;
+    font-size: 30px;
+    line-height: 1.15;
+    margin-bottom: 0;
+}
+
+.topup-result-deductions {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.topup-result-deductions h4 {
+    margin-bottom: 4px;
+}
+
+.topup-result-deductions div {
+    margin-bottom: 2px;
+}
+
+.topup-result-final {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.topup-result-final span {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.topup-result-final strong {
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+#topupCalculationResult hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #aaa;
+}
+/* =====================================================
+   TOPUP PHONE CONDITION CHECKLIST
+===================================================== */
+
+.topup-condition-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.topup-condition-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+    padding: 10px 14px;
+
+    background: #F7F7F7;
+    border-radius: 10px;
+
+    font-weight: 500;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.topup-condition-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+
+    margin: 0;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+.topup-condition-option span {
+    margin: 0;
+    line-height: 1.3;
+}
