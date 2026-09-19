@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>THE MARKET OS</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="logo-placeholder">
+                LOGO
+            </div>
+
+            <h2>THE MARKET</h2>
+            <span>Management System</span>
+
+        </div>
+
+
+        <nav>
+
+            <button class="menu active" id="dashboardMenu">
+                🏠 Dashboard
+            </button>
+
+    <div class="menu record-sale-menu" id="recordSaleMenu">
+
+        <div class="record-sale-main">
+            <span>💰 Record Sale</span>
+            <span id="recordSaleArrow">▾</span>
+        </div>
+
+    <div id="recordSaleSubmenu" class="record-sale-submenu hidden">
+
+        <div class="record-sale-option" id="inshopSaleOption">
+            Inshop General Merchandise
+        </div>
+
+        <div class="record-sale-option" id="outsourcedSaleOption">
+            Outsourced Merchandise
+        </div>
+
+        <div class="record-sale-option" id="sbbgSaleOption">
+            SBBG / Accessories
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="menu inventory-menu" id="inventoryMenu">
+
+        <div class="inventory-main">
+            <span>📦 Inventory</span>
+            <span id="inventoryArrow">▾</span>
+        </div>
+
+    <div id="inventorySubmenu" class="inventory-submenu hidden">
+
+        <div class="inventory-option" id="inventorySearchOption">
+            Inventory Search
+        </div>
+
+        <div class="inventory-option" id="stockSummaryOption">
+            Stock Summary
+        </div>
+
+        <div class="inventory-option" id="restockOption">
+            Restock Suggestions
+        </div>
+
+    </div>
+
+</div>
+
+
+            <button class="menu">
+                📊 Reports
+            </button>
+
+
+            <button class="menu">
+                🔧 Repairs
+            </button>
+
+
+<div class="menu tools-menu" id="toolsMenu">
+
+    <div class="tools-main">
+        <span>🛠 Tools</span>
+        <span id="toolsArrow">▾</span>
+    </div>
+
+    <div id="toolsSubmenu" class="tools-submenu hidden">
+
+    <div class="tools-option" id="invoiceGeneratorOption">
+        Invoice Generator
+    </div>
+
+    <div class="tools-option" id="warrantyGeneratorOption">
+        Warranty Generator
+    </div>
+
+    <div class="tools-option" id="topupCalculatorOption">
+        Topup Calculator
+    </div>
+
+</div>
+
+</div>
+
+
+        </nav>
+
+
+        <button class="logout">
+            Logout
+        </button>
+
+
+    </aside>
+
+
+
+
+
+    <!-- MAIN AREA -->
+
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+
+            <div>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Welcome back, Employee
+                </p>
+
+            </div>
+
+
+
+            <div class="profile">
+
+                <span>
+                    Admin
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+
+
+        <!-- DASHBOARD CARDS -->
+
+
+        <section class="dashboard" id="dashboardPage">
+
+
+            <div class="card">
+
+                <h3>
+                    Today's Sales
+                </h3>
+
+                <strong>
+                    12
+                </strong>
+
+                <p>
+                    Phones sold
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Revenue
+                </h3>
+
+                <strong>
+                    TZS 24M
+                </strong>
+
+                <p>
+                    Today's sales
+                </p>
+
+            </div>
+
+
+
+
+            <div class="card">
+
+                <h3>
+                    Stock
+                </h3>
+
+                <strong>
+                    184
+                </strong>
+
+                <p>
+                    Phones available
+                </p>
+
+            </div>
+
+
+
+
+            <div class="card">
+
+                <h3>
+                    Repairs
+                </h3>
+
+                <strong>
+                    8
+                </strong>
+
+                <p>
+                    Pending
+                </p>
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+<div id="recordSalePage" class="hidden">
+<div id="normalSaleSection" class="hidden">
+        <!-- RECORD SALE -->
+
+
+        <section class="sale-box">
+
+
+            <h2>
+                Record A Sale
+            </h2>
+
+
+            <div class="form-group">
+
+                <label>
+                    Batch Number
+                </label>
+
+                <input 
+                type="text"
+                id="batch"
+                placeholder="Example: 42/W7/L10/S4">
+
+
+            </div>
+
+
+
+
+            <div class="form-group">
+
+
+                <label>
+                    Last 4 Digits of IMEI/Serial Number
+                </label>
+
+
+                <input 
+                type="text"
+                maxlength="4"
+                id="imei"
+                placeholder="Example: 4831">
+
+
+            </div>
+
+
+
+
+            <button id="search">
+
+                SEARCH PRODUCT
+
+            </button>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <!-- PHONE RESULT -->
+
+
+        <section 
+        class="sale-box hidden"
+        id="phoneResult">
+
+
+            <h2>
+                Product Found ✓
+            </h2>
+
+
+            <div class="phone-info">
+
+
+                <p>
+                    Model:
+                    <b>
+                    iPhone 14 Pro Max
+                    </b>
+                </p>
+
+
+                <p>
+                    Storage:
+                    <b>
+                    256GB
+                    </b>
+                </p>
+
+
+
+                <p>
+                    Color:
+                    <b>
+                    Deep Purple
+                    </b>
+                </p>
+
+
+
+                <p>
+                    IMEI:
+                    <b>
+                    ********4831
+                    </b>
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Selling Price
+                </label>
+
+
+                <input
+                 type="text"
+                 id="price"
+                 placeholder="Enter selling price"
+                 inputmode="numeric"
+                 autocomplete="off">
+
+
+            </div>
+
+            <div class="form-group">
+
+                 <label>
+                    Total Bonuses Given
+                </label>
+
+
+                <input
+                type="text"
+                id="bonus"
+                placeholder="Enter total bonus cost"
+                inputmode="numeric"
+                autocomplete="off">
+
+            </div>
+
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Status
+                </label>
+
+
+                <select id="status">
+
+                  <option value="SOLD">
+                      SOLD
+                  </option>
+
+                 </select>
+
+
+            </div>
+
+
+
+
+
+            <div class="form-group">
+
+
+                <label>
+                    Month Sold
+                </label>
+
+
+                <select id="month">
+
+    <option value="JAN">JAN</option>
+    <option value="FEB">FEB</option>
+    <option value="MAR">MAR</option>
+    <option value="APR">APR</option>
+    <option value="MAY">MAY</option>
+    <option value="JUN">JUN</option>
+    <option value="JUL">JUL</option>
+    <option value="AUG">AUG</option>
+    <option value="SEP">SEP</option>
+    <option value="OCT">OCT</option>
+    <option value="NOV">NOV</option>
+    <option value="DEC">DEC</option>
+
+</select>
+
+
+            </div>
+
+
+
+
+
+            <button id="save">
+
+                SAVE SALE
+
+            </button>
+
+
+
+
+        </section>
+        </div>
+
+
+<!-- =====================================================
+     SBBG SALE
+===================================================== -->
+
+<section class="sale-box hidden" id="sbbgSaleSection">
+
+    <!-- DECIDE IF SBBG OR ACCESSORIES -->
+     <div class="form-group">
+
+    <label>
+        Record Type
+    </label>
+
+    <select id="recordType">
+
+        <option value="SBBG">
+            SBBG
+        </option>
+
+        <option value="ACCESSORIES">
+            ACCESSORIES
+        </option>
+
+    </select>
+
+</div>   
+
+    <h2>
+        Record SBBG/Accessories Sale
+    </h2>
+
+
+    <div class="form-group">
+
+        <label>
+            Sheet
+        </label>
+
+        <input
+            type="text"
+            id="sbbgSheet"
+            placeholder="Example: SBBG1/book3">
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            Arrival / Mini-Batch
+        </label>
+
+        <input
+            type="text"
+            id="sbbgBatch"
+            placeholder="Example: 18/11">
+
+    </div>
+
+    <div class="form-group">
+
+    <label>
+        Part Type
+    </label>
+
+    <select id="sbbgPartType">
+
+        <option value="SCREEN">
+            SCREEN
+        </option>
+
+        <option value="BATTERY">
+            BATTERY
+        </option>
+
+        <option value="BACKGLASS">
+            BACKGLASS
+        </option>
+
+    </select>
+
+</div>
+
+    <button id="sbbgSearch">
+           SEARCH MINI-BATCH
+    </button>
+
+
+    <div class="form-group">
+
+    <label>
+        Part / Model
+    </label>
+
+    <select id="sbbgModel" disabled>
+
+        <option value="">
+            Search a mini-batch first
+        </option>
+
+    </select>
+
+</div>
+
+
+    <div class="form-group">
+
+        <label>
+            Quantity Sold
+        </label>
+
+        <input
+            type="number"
+            id="sbbgQuantity"
+            min="1"
+            value="1">
+
+    </div>
+
+
+
+
+
+    <div class="form-group">
+
+        <label>
+            Month
+        </label>
+
+        <select id="sbbgMonth">
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+    <label>
+        Actual Selling Price
+    </label>
+
+    <input
+        type="text"
+        id="sbbgActualSellingPrice"
+        placeholder="0"
+        inputmode="numeric">
+
+    </div>
+
+
+    <button id="sbbgSave">
+
+        RECORD A SALE
+
+    </button>
+
+</section>
+
+<!-- =====================================================
+     OUTSOURCED MERCHANDISE SALE
+===================================================== -->
+
+<div
+    id="outsourcedSaleSection"
+    class="sale-section hidden"
+>
+
+    <div class="sale-card">
+
+        <h2>Record Outsourced Sale</h2>
+
+        <!-- DATE -->
+
+        <div class="form-group">
+
+            <label for="outsourcedDate">
+                Date
+            </label>
+
+            <input
+                type="date"
+                id="outsourcedDate"
+            >
+
+        </div>
+
+
+        <!-- PRODUCT -->
+
+        <div class="form-group">
+
+            <label for="outsourcedProduct">
+                Product
+            </label>
+
+            <input
+                type="text"
+                id="outsourcedProduct"
+                placeholder="Example: iPhone 15 Pro Max"
+            >
+
+        </div>
+
+
+        <!-- COLOR -->
+
+        <div class="form-group">
+
+            <label for="outsourcedColor">
+                Color
+            </label>
+
+            <input
+                type="text"
+                id="outsourcedColor"
+                placeholder="Example: Natural Titanium"
+            >
+
+        </div>
+
+
+        <!-- IMEI / SERIAL -->
+
+        <div class="form-group">
+
+            <label for="outsourcedImei">
+                IMEI / Serial Number
+            </label>
+
+            <input
+                type="text"
+                id="outsourcedImei"
+                placeholder="Optional"
+            >
+
+        </div>
+
+
+        <!-- SUPPLIER -->
+
+        <div class="form-group">
+
+            <label for="outsourcedSupplier">
+                Supplier / Owner
+            </label>
+
+            <input
+                type="text"
+                id="outsourcedSupplier"
+                placeholder="Example: John"
+            >
+
+        </div>
+
+
+        <!-- COST -->
+
+        <div class="form-group">
+
+            <label for="outsourcedCost">
+                Cost to Supplier
+            </label>
+
+            <input
+                type="text"
+                id="outsourcedCost"
+                placeholder="Example: 1,500,000"
+                inputmode="numeric"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+                Bonus
+            </label>
+
+            <input
+                type="text"
+                id="outsourcedBonus"
+                placeholder="0"
+                inputmode="numeric"
+                autocomplete="off">
+
+        </div>
+
+
+        <!-- SELLING PRICE -->
+
+        <div class="form-group">
+
+            <label for="outsourcedSellingPrice">
+                Selling Price
+            </label>
+
+            <input
+                type="text"
+                id="outsourcedSellingPrice"
+                placeholder="Example: 1,700,000"
+                inputmode="numeric"
+            >
+
+        </div>
+
+
+
+
+        <!-- SAVE -->
+
+        <button
+            type="button"
+            id="outsourcedSaveButton"
+            class="primary-button"
+        >
+            RECORD OUTSOURCED SALE
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+<!-- =====================================================
+     INVENTORY PAGE
+===================================================== -->
+
+<div id="inventoryPage" class="hidden">
+
+    <div id="inventorySearchSection" class="hidden">
+
+    <section class="sale-box">
+
+        <h2>
+            Inventory
+        </h2>
+
+        <div class="form-group">
+
+            <label>
+                Find Stock
+            </label>
+
+            <input
+                type="text"
+                id="inventorySearch1"
+                placeholder="Example: 13PM(128G)"
+                autocomplete="off">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Status / Second Filter
+            </label>
+
+            <input
+                type="text"
+                id="inventorySearch2"
+                placeholder="Example: O/S"
+                autocomplete="off">
+
+        </div>
+
+
+        <button id="inventoryFilterButton">
+            FIND STOCK
+        </button>
+
+    </section>
+    
+
+
+    <!-- FILTERED RESULTS -->
+
+    <section
+        class="sale-box hidden"
+        id="filteredResultsSection">
+
+        <h2>
+            Filtered Results
+        </h2>
+
+        <div id="filteredResults">
+        </div>
+
+    </section>
+    </div>
+
+
+    <!-- STOCK SUMMARY -->
+
+    <div id="stockSummarySection" class="hidden">
+
+    <section class="sale-box">
+
+        <h2>
+            Stock Summary
+        </h2>
+
+        <button id="stockSummaryButton">
+            UPDATE STOCK SUMMARY
+        </button>
+
+        <div id="stockSummary">
+        </div>
+
+    </section>
+    </div>
+
+
+       <!-- RESTOCK -->
+
+    <div id="restockSection" class="hidden">
+
+    <section class="sale-box">
+
+    <h2>
+        Restock
+    </h2>
+
+    <button id="restockRefreshButton">
+        UPDATE RESTOCK
+    </button>
+
+    <div id="restockResults">
+    </div>
+
+</section>
+    </div>
+</div>
+
+<!-- =====================================================
+     INVOICE GENERATOR
+===================================================== -->
+
+<section id="invoiceGeneratorPage" class="hidden">
+
+    <div class="page-header">
+
+        <div>
+            <h2>Invoice Generator</h2>
+            
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Invoice Information</h3>
+
+        <div class="form-grid">
+
+    <!-- BILL TO -->
+    <div class="invoice-party-block">
+
+        <h4>Bill To</h4>
+
+        <div class="form-group">
+            <label>Customer Name</label>
+            <input
+                type="text"
+                id="invoiceCustomerName"
+                placeholder="Customer name"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Phone</label>
+            <input
+                type="text"
+                id="invoiceCustomerPhone"
+                placeholder="Phone number"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>TIN</label>
+            <input
+                type="text"
+                id="invoiceCustomerTIN"
+                placeholder="TIN"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>VRN</label>
+            <input
+                type="text"
+                id="invoiceCustomerVRN"
+                placeholder="VRN"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <textarea
+                id="invoiceCustomerAddress"
+                rows="3"
+                placeholder="Customer address"
+            ></textarea>
+        </div>
+
+    </div>
+
+
+    <!-- SHIP TO -->
+    <div class="invoice-party-block">
+
+        <h4>Ship To</h4>
+
+        <div class="form-group">
+            <label>Shipping Address</label>
+            <textarea
+                id="invoiceShippingAddress"
+                rows="3"
+                placeholder="Shipping address"
+            ></textarea>
+        </div>
+
+    </div>
+
+
+    <!-- INVOICE NUMBER -->
+    <div class="form-group">
+
+        <label>Invoice #</label>
+
+        <input
+            type="text"
+            id="invoiceNumber"
+            placeholder="Generating..."
+            readonly>
+
+    </div>
+
+
+    <!-- INVOICE DATE -->
+    <div class="form-group">
+
+        <label>Invoice Date</label>
+
+        <input
+            type="date"
+            id="invoiceDate"
+        >
+
+    </div>
+
+
+    <!-- P.O NUMBER -->
+    <div class="form-group">
+
+        <label>P.O #</label>
+
+        <input
+            type="text"
+            id="invoicePO"
+            placeholder="Optional"
+        >
+
+    </div>
+
+
+    <!-- DUE DATE -->
+    <div class="form-group">
+
+        <label>Due Date</label>
+
+        <input
+            type="date"
+            id="invoiceDueDate"
+        >
+
+    </div>
+
+</div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Products</h3>
+
+        <div id="invoiceProducts">
+
+            <div class="invoice-product-row">
+
+    <div class="invoice-description-block">
+
+        <div class="form-group">
+
+            <label>
+                Product Name
+            </label>
+
+            <input
+                type="text"
+                class="invoice-description"
+                placeholder="Example: HP ELITEBOOK x360 1040 G8"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Additional Description (Optional)
+            </label>
+
+            <textarea
+                class="invoice-additional-description"
+                rows="2"
+                placeholder="Example: 512G SSD + 16G RAM&#10;Core i7-11th Gen"
+            ></textarea>
+
+        </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            Unit Price
+        </label>
+
+        <input
+            type="text"
+            class="invoice-unit-price"
+            placeholder="0"
+            inputmode="numeric"
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            QTY
+        </label>
+
+        <input
+            type="number"
+            class="invoice-quantity"
+            min="1"
+            value="1"
+        >
+
+    </div>
+
+</div>
+
+
+        <button
+            type="button"
+            id="addInvoiceProduct"
+        >
+            + ADD PRODUCT
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Tax & Payment</h3>
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>VAT</label>
+
+                <select id="invoiceVAT">
+
+                    <option value="include">
+                        Include VAT (18%)
+                    </option>
+
+                    <option value="exclude">
+                        Exclude VAT
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Payment Information (Optional)</label>
+
+                <textarea
+                    id="invoicePaymentInfo"
+                    rows="4"
+                    placeholder="Leave blank to use default payment information"
+                ></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <button
+            type="button"
+            id="generateInvoiceButton"
+        >
+            GENERATE INVOICE
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     WARRANTY GENERATOR PAGE
+     ===================================================== -->
+
+<div id="warrantyGeneratorPage" class="page hidden">
+
+    <div class="page-header">
+        <h2>Warranty Generator</h2>
+    </div>
+
+
+    <!-- WARRANTY INFORMATION -->
+    <div class="card">
+
+        <h3>Warranty Information</h3>
+
+        <div class="form-grid">
+
+
+            <!-- CLIENT NAME -->
+            <div class="form-group">
+
+                <label>
+                    Client's Name
+                </label>
+
+                <input
+                    type="text"
+                    id="warrantyClientName"
+                    placeholder="Client name"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="form-group">
+
+                <label>
+                    Client's Phone
+                </label>
+
+                <input
+                    type="text"
+                    id="warrantyClientPhone"
+                    placeholder="Phone number"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- ADDRESS -->
+            <div class="form-group">
+
+                <label>
+                    Client's Address
+                </label>
+
+                <textarea
+                    id="warrantyClientAddress"
+                    rows="3"
+                    placeholder="Client address"
+                ></textarea>
+
+            </div>
+
+
+            <!-- PURCHASE DATE -->
+            <div class="form-group">
+
+                <label>
+                    Purchase Date
+                </label>
+
+                <input
+                    type="date"
+                    id="warrantyPurchaseDate"
+                >
+
+            </div>
+
+
+            <!-- MODEL -->
+            <div class="form-group">
+
+                <label>
+                    Model Name
+                </label>
+
+                <input
+                    type="text"
+                    id="warrantyModel"
+                    placeholder="Example: iPhone 15 Pro Max 256G"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- SERIAL / IMEI -->
+            <div class="form-group">
+
+                <label>
+                    Serial No / IMEI No
+                </label>
+
+                <input
+                    type="text"
+                    id="warrantySerial"
+                    placeholder="Serial number / IMEI"
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- GENERATE BUTTON -->
+
+        <button
+            type="button"
+            id="generateWarrantyButton"
+        >
+            GENERATE WARRANTY
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     TOPUP CALCULATOR PAGE
+===================================================== -->
+
+<section id="topupCalculatorPage" class="hidden">
+
+    <div class="page-header">
+
+        <div>
+            <h2>Topup Calculator</h2>
+        </div>
+
+    </div>
+
+
+    <!-- CUSTOMER PHONE -->
+
+    <div class="card">
+
+        <h3>Customer's Phone</h3>
+
+        <div class="form-grid">
+
+            <!-- MODEL -->
+
+            <div class="form-group">
+
+                <label>
+                    Phone Model
+                </label>
+
+                <select id="topupPhoneModel">
+
+                    <option value="">
+                        Loading models...
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- STORAGE -->
+
+            <div class="form-group">
+
+                <label>
+                    Storage
+                </label>
+
+                <select id="topupPhoneStorage" disabled>
+
+                    <option value="">
+                        Select model first
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+        <!-- MANUAL OLD PHONE -->
+
+<div
+    class="form-group hidden"
+    id="topupOldPhoneManualGroup"
+>
+
+    <label>
+        Phone Model
+    </label>
+
+    <input
+        type="text"
+        id="topupOldPhoneManualModel"
+        placeholder="Example: 12 Pro"
+        autocomplete="off"
+    >
+
+
+    <label>
+        Storage
+    </label>
+
+    <input
+        type="text"
+        id="topupOldPhoneManualStorage"
+        placeholder="Example: 128G"
+        autocomplete="off"
+    >
+
+</div>
+
+    </div>
+
+
+    <!-- CURRENT ASKING PRICE -->
+
+    <div class="card">
+
+        <h3>Current Asking Price</h3>
+
+        <div class="form-group">
+
+            <label>
+                Asking Price
+            </label>
+
+            <input
+                type="text"
+                id="topupCurrentAP"
+                placeholder="Will be fetched automatically"
+                inputmode="numeric"
+                autocomplete="off"
+                readonly
+            >
+
+        </div>
+
+    </div>
+
+
+    
+
+    <!-- =====================================================
+     PHONE CONDITION
+===================================================== -->
+
+<div class="card">
+
+    <h3>Phone Condition</h3>
+
+    <div class="form-group">
+
+        <label>
+            Select any issues with the phone
+        </label>
+
+        <div class="topup-condition-options">
+
+            <label class="topup-condition-option">
+                <input
+                    type="checkbox"
+                    id="topupBackglass"
+                    value="backglass"
+                >
+                <span>Backglass</span>
+            </label>
+
+
+            <label class="topup-condition-option">
+                <input
+                    type="checkbox"
+                    id="topupBatteryService"
+                    value="batteryService"
+                >
+                <span>Battery Health ≤ 80%</span>
+            </label>
+
+
+            <label class="topup-condition-option">
+                <input
+                    type="checkbox"
+                    id="topupBatteryReplaced"
+                    value="batteryReplaced"
+                >
+                <span>Battery Replaced Message</span>
+            </label>
+
+
+            <label class="topup-condition-option">
+                <input
+                    type="checkbox"
+                    id="topupDisplayReplaced"
+                    value="displayReplaced"
+                >
+                <span>Display Replaced Message</span>
+            </label>
+
+
+            <label class="topup-condition-option">
+                <input
+                    type="checkbox"
+                    id="topupScreenReplacement"
+                    value="screenReplacement"
+                >
+                <span>Screen Replacement</span>
+            </label>
+
+
+            <label class="topup-condition-option">
+                <input
+                    type="checkbox"
+                    id="topupFaceID"
+                    value="faceID"
+                >
+                <span>Face ID Not Working</span>
+            </label>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     NEW PHONE
+===================================================== -->
+
+<div class="card">
+
+    <h3>New Phone</h3>
+
+    <div class="form-grid">
+
+        <!-- MODEL -->
+
+        <div class="form-group">
+
+            <label>
+                Phone Model
+            </label>
+
+            <select id="topupNewPhoneModel">
+
+                <option value="">
+                    Loading models...
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- STORAGE -->
+
+        <div class="form-group">
+
+            <label>
+                Storage
+            </label>
+
+            <select
+                id="topupNewPhoneStorage"
+                disabled
+            >
+
+                <option value="">
+                    Select model first
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+        <!-- MANUAL / UNLISTED NEW PHONE -->
+
+    <div
+        class="form-group hidden"
+        id="topupNewPhoneManualModelGroup"
+    >
+
+        <label>
+            Phone Model
+        </label>
+
+        <input
+            type="text"
+            id="topupNewPhoneManualModel"
+            placeholder="Example: 16 Plus"
+            autocomplete="off"
+        >
+
+
+        <label>
+            Storage
+        </label>
+
+        <input
+            type="text"
+            id="topupNewPhoneManualStorage"
+            placeholder="Example: 128G"
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <!-- ASKING PRICE -->
+
+    <div class="form-group">
+
+        <label>
+            Asking Price
+        </label>
+
+        <input
+            type="text"
+            id="topupNewPhoneAP"
+            placeholder="Will be fetched automatically"
+            inputmode="numeric"
+            autocomplete="off"
+            readonly
+        >
+
+    </div>
+
+
+    <!-- MANUAL AP -->
+
+    <div
+        class="form-group hidden"
+        id="topupNewPhoneManualAPGroup"
+    >
+
+        <label>
+            Enter Asking Price Manually
+        </label>
+
+        <input
+            type="text"
+            id="topupNewPhoneManualAP"
+            placeholder="Enter asking price"
+            inputmode="numeric"
+            autocomplete="off"
+        >
+
+    </div>
+
+</div>
+
+<button
+    type="button"
+    id="topupCalculateButton"
+>
+    Calculate Top-Up Value
+</button>
+
+<!-- RESULT -->
+
+    <div class="card hidden" id="topupCalculationResult">
+
+        <h3>Calculation</h3>
+
+        <div id="topupResultContent">
+        </div>
+
+    </div>
+
+</section>
+    </main>
+
+
+
+</div>
+
+
+
+
+
+<!-- NOTIFICATION -->
+
+<div id="toast">
+
+</div>
+
+
+
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>
